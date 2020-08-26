@@ -1,19 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Color from './../Color/Color';
-import { removeColor, rateColor } from '../../store/actions';
 import './ColorList.scss';
 
-const ColorList = ({ store }) => {
-  const { colors } = store.getState();
+const ColorList = ({
+  colors = [],
+  onRemoveColor = (f) => f,
+  onRate = (f) => f,
+}) => {
   return (
     <div className="color-list">
       {colors.map((color) => (
         <Color
           key={color.id}
           {...color}
-          onRemoveColor={() => store.dispatch(removeColor(color.id))}
-          onRate={(rating) => store.dispatch(rateColor(color.id, rating))}
+          onRemoveColor={() => onRemoveColor(color.id)}
+          onRate={(rating) => onRate(color.id, rating)}
         />
       ))}
     </div>
@@ -21,7 +23,9 @@ const ColorList = ({ store }) => {
 };
 
 ColorList.propTypes = {
-  store: PropTypes.object,
+  colors: PropTypes.array,
+  onRemoveColor: PropTypes.func,
+  onRate: PropTypes.func,
 };
 
 export default ColorList;
