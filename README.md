@@ -14,7 +14,7 @@
 - Деплой на github pages: `yarn deploy`
 
 ## Демо
-- [color-organizer-explicit](https://dimktsoy.github.io/color-organizer-context/)
+- [color-organizer-context](https://dimktsoy.github.io/color-organizer-context/)
 
 ## Используемые ресурсы и инструменты:
 - [Create React App (рабочее окружение)](https://github.com/facebook/create-react-app)
