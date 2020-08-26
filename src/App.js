@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AddColorForm from './components/AddColorForm/AddColorForm';
+import ColorList from './components/ColorList/ColorList';
+import './App.scss';
 
-function App() {
+const App = ({ store }) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <AddColorForm store={store} />
+      <ColorList store={store} />
     </div>
   );
-}
+};
 
 export default App;
