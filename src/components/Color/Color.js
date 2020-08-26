@@ -32,6 +32,11 @@ class Color extends React.Component {
     console.log('componentDidUpdate color id', id);
   }
 
+  componentWillUnmount() {
+    const { id } = this.props;
+    console.log('componentWillUnmount color id', id);
+  }
+
   render() {
     const {
       color,
