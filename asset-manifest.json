@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/color-organizer-context/static/css/main.e30ced16.chunk.css",
+    "main.js": "/color-organizer-context/static/js/main.b8ac8fcc.chunk.js",
+    "main.js.map": "/color-organizer-context/static/js/main.b8ac8fcc.chunk.js.map",
+    "runtime-main.js": "/color-organizer-context/static/js/runtime-main.57c12275.js",
+    "runtime-main.js.map": "/color-organizer-context/static/js/runtime-main.57c12275.js.map",
+    "static/js/2.74397e55.chunk.js": "/color-organizer-context/static/js/2.74397e55.chunk.js",
+    "static/js/2.74397e55.chunk.js.map": "/color-organizer-context/static/js/2.74397e55.chunk.js.map",
+    "index.html": "/color-organizer-context/index.html",
+    "precache-manifest.dfaf508a10f55dc47e0ea4d07104a2a5.js": "/color-organizer-context/precache-manifest.dfaf508a10f55dc47e0ea4d07104a2a5.js",
+    "service-worker.js": "/color-organizer-context/service-worker.js",
+    "static/css/main.e30ced16.chunk.css.map": "/color-organizer-context/static/css/main.e30ced16.chunk.css.map",
+    "static/js/2.74397e55.chunk.js.LICENSE.txt": "/color-organizer-context/static/js/2.74397e55.chunk.js.LICENSE.txt",
+    "static/media/color-icon-remove.svg": "/color-organizer-context/static/media/color-icon-remove.91bebd82.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.57c12275.js",
+    "static/js/2.74397e55.chunk.js",
+    "static/css/main.e30ced16.chunk.css",
+    "static/js/main.b8ac8fcc.chunk.js"
+  ]
+}
