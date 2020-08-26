@@ -13,9 +13,4 @@ const store = createStore(
 
 window.store = store;
 
-const render = () =>
-  ReactDOM.render(<App store={store} />, document.getElementById('root'));
-
-store.subscribe(render);
-
-render();
+ReactDOM.render(<App store={store} />, document.getElementById('root'));
