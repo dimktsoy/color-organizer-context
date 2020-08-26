@@ -1,20 +1,17 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import { addColor } from '../../store/actions';
 import './AddColorForm.scss';
 
-const AddColorForm = ({ store }) => {
+const AddColorForm = ({ onAddColor = (f) => f }) => {
   const text = useRef(null);
   const color = useRef(null);
-
   const submit = (e) => {
     e.preventDefault();
-    store.dispatch(addColor(text.current.value, color.current.value));
+    onAddColor(text.current.value, color.current.value);
     text.current.value = '';
     color.current.value = '';
     text.current.focus();
   };
-
   return (
     <form className="add-color-form" onSubmit={submit}>
       <input
@@ -38,7 +35,7 @@ const AddColorForm = ({ store }) => {
 };
 
 AddColorForm.propTypes = {
-  store: PropTypes.object,
+  onAddColor: PropTypes.func,
 };
 
 export default AddColorForm;
