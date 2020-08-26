@@ -1,15 +1,27 @@
 import React from 'react';
-import AddColorForm from './components/AddColorForm/AddColorForm';
-import ColorList from './components/ColorList/ColorList';
+import StoreContext from './StoreContext';
+import AddColorFormContainer from './components/AddColorForm/AddColorFormContainer';
+import ColorListContainer from './components/ColorList/ColorListContainer';
 import './App.scss';
 
-const App = ({ store }) => {
-  return (
-    <div className="app">
-      <AddColorForm store={store} />
-      <ColorList store={store} />
-    </div>
-  );
-};
+class App extends React.Component {
+  componentWillMount() {
+    this.unsubscribe = this.props.store.subscribe(() => this.forceUpdate());
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
+  render() {
+    return (
+      <div className="app">
+        <StoreContext.Provider value={this.props.store}>
+          <AddColorFormContainer />
+          <ColorListContainer />
+        </StoreContext.Provider>
+      </div>
+    );
+  }
+}
 
 export default App;
